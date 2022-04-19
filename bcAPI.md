@@ -1,115 +1,62 @@
 {
 	"info": {
-		"_postman_id": "b66543f5-3994-4c58-8169-f3d861ad0e19",
-		"name": "Birth Certificate Service_v1 Copy 2",
-		"description": "> This Collection Contain Sample requests for Birth_Certiicate_Service\n\nIt Contains the following requests:\n\n*   Get Applicant Data\n*   Get Beneficiary Birth Data\n*   Get Fees\n*   Get prerequisites\n*   Get List Of Countries\n*   Get List Of Martial Status\n*   Get List Of Cites\n*   Get List Of Departments",
+		"_postman_id": "38f18056-b495-4fc4-ad98-d55d77a92491",
+		"name": "New Collection",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "Get Martial Status",
+			"name": "countries",
 			"request": {
 				"method": "POST",
-				"header": [
-					{
-						"key": "Access-Control-Allow-Origin",
-						"value": "*",
-						"type": "text"
-					}
-				],
+				"header": [],
 				"url": {
-					"raw": "http://localhost:8083/birthcertificate/martialstatus",
+					"raw": "http://localhost:8083/api/v2/test/countries",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8083",
 					"path": [
-						"birthcertificate",
-						"martialstatus"
-					]
-				},
-				"description": "API endpoint to **Get list of martial status** from the system .\n\n> A Successful API Request Will result in a **HTTP 200** status code ."
-			},
-			"response": []
-		},
-		{
-			"name": "Get List Of City",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Access-Control-Allow-Origin",
-						"value": "*",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "\r\n{\r\n  \"ISO_Code\": \"001\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:8083/birthcertificate/cities",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8083",
-					"path": [
-						"birthcertificate",
-						"cities"
-					]
-				},
-				"description": "API endpoint to **Get list of Cities** in the system .\n\n> A Successful API Request Will result in a **HTTP 200** status code ."
-			},
-			"response": []
-		},
-		{
-			"name": "Get List Of Countries",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Access-Control-Allow-Origin",
-						"value": "*",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "http://localhost:8083/birthcertificate/countries",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8083",
-					"path": [
-						"birthcertificate",
+						"api",
+						"v2",
+						"test",
 						"countries"
 					]
-				},
-				"description": "API endpoint to **Get list of Countries** in the system .\n\n> A Successful API Request Will result in a **HTTP 200** status code ."
+				}
 			},
 			"response": []
 		},
 		{
-			"name": "Get Applicant Data",
+			"name": "martial status",
 			"request": {
 				"method": "POST",
-				"header": [
-					{
-						"key": "Access-Control-Allow-Origin",
-						"value": "*",
-						"type": "text"
-					}
-				],
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/api/v2/test/martialstatus",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"v2",
+						"test",
+						"martialstatus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "departments",
+			"request": {
+				"method": "POST",
+				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"NAT_NO\": \"1234\"\r\n}",
+					"raw": "{\r\n\"IsoCode\":\"001\",\r\n\"ServiceType\":\"Birth_Certificate\",\r\n\"DepartmentType\":\"02\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -117,35 +64,92 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8083/birthcertificate/applicantes",
+					"raw": "http://localhost:8083/api/v2/test/departments",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8083",
 					"path": [
-						"birthcertificate",
+						"api",
+						"v2",
+						"test",
+						"departments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cities",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"ISO_Code\":\"001\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/api/v2/test/cities",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"v2",
+						"test",
+						"cities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "applicant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"NAT_NO\":\"1234\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/api/v2/test/applicantes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"v2",
+						"test",
 						"applicantes"
 					]
-				},
-				"description": "API endpoint to **Fetch Data foer an applicant** in the system .\n\n> A Successful API Request Will result in a **HTTP 200** status code .\n> \n> Request for non existing Applicant will return **HTTP 400** status code"
+				}
 			},
 			"response": []
 		},
 		{
-			"name": "Get Beneficiary Birth Data",
+			"name": "Beneficiary",
 			"request": {
 				"method": "POST",
-				"header": [
-					{
-						"key": "Access-Control-Allow-Origin",
-						"value": "*",
-						"type": "text"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"NAT_NO\": \"00\"\r\n}",
+					"raw": "{\"NAT_NO\":\"00\"}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -153,35 +157,30 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8083/birthcertificate/beneficiaries",
+					"raw": "http://localhost:8083/api/v2/test/beneficiaries",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8083",
 					"path": [
-						"birthcertificate",
+						"api",
+						"v2",
+						"test",
 						"beneficiaries"
 					]
-				},
-				"description": "API endpoint to **Fetch The Birth Data for the applicant's beneficiery** in the system .\n\n> A Successful API Request Will result in a **HTTP 200** status code .\n> \n> Request for non existing Applicant will return **HTTP 400** status code"
+				}
 			},
 			"response": []
 		},
 		{
-			"name": "Fees Calculation",
+			"name": "fees",
 			"request": {
 				"method": "POST",
-				"header": [
-					{
-						"key": "Access-Control-Allow-Origin",
-						"value": "*",
-						"type": "text"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n \"DeliveryCountryCode\":\"001\",\r\n \"ServiceType\":\"Birth_Certificate\",\r\n \"DeliveryType\":\"Aramex\",\r\n \"arabicCopies\":2,\r\n \"EnglishCopies\":1\r\n}",
+					"raw": "{\r\n \"DeliveryCountryCode\":\"001\",\r\n \"ServiceType\":\"Birth_Certificate\",\r\n \"DeliveryType\":\"Aramex\",\r\n \"arabicCopies\":0,\r\n \"EnglishCopies\":1\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -189,35 +188,30 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8083/birthcertificate/fees",
+					"raw": "http://localhost:8083/api/v2/test/fees",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8083",
 					"path": [
-						"birthcertificate",
+						"api",
+						"v2",
+						"test",
 						"fees"
 					]
-				},
-				"description": "#### API endpoint to calculate the fees for the requested service .\n\n> A Successful API Request Will result in a **HTTP 200** status code .\n> \n> Request for non existing Applicant will return **HTTP 400** status code"
+				}
 			},
 			"response": []
 		},
 		{
-			"name": "Get Prerequisit",
+			"name": "prerequiste",
 			"request": {
 				"method": "POST",
-				"header": [
-					{
-						"key": "Access-Control-Allow-Origin",
-						"value": "*",
-						"type": "text"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n \"ServiceType\": \"Birth_Certificate\",\r\n \"UserLanguage\": \"ar_JO\"\r\n}",
+					"raw": "{\"ServiceType\":\"Birth_Certificate\",\r\n\"UserLanguage\":\"ar_JO\"}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -225,35 +219,30 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8083/birthcertificate/prerequisit",
+					"raw": "http://localhost:8083/api/v2/test/prerequisit",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8083",
 					"path": [
-						"birthcertificate",
+						"api",
+						"v2",
+						"test",
 						"prerequisit"
 					]
-				},
-				"description": "#### API endpoint to get the prerequisite for the requested service .\n\n> A Successful API Request Will result in a **HTTP 200** status code .\n> \n> Request for non existing Applicant will return **HTTP 400** status code"
+				}
 			},
 			"response": []
 		},
 		{
-			"name": "Check English Name",
+			"name": "english name",
 			"request": {
 				"method": "POST",
-				"header": [
-					{
-						"key": "Access-Control-Allow-Origin",
-						"value": "*",
-						"type": "text"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"NAT_NO\":\"1234\",\r\n\"ServiceType\":\"Birth_Certificate\"}",
+					"raw": "{\"ServiceType\":\"Birth_Certificate\",\r\n\"NAT_NO\":\"1234\"}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -261,18 +250,19 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8083/birthcertificate/englishname",
+					"raw": "http://localhost:8083/api/v2/test/englishname",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8083",
 					"path": [
-						"birthcertificate",
+						"api",
+						"v2",
+						"test",
 						"englishname"
 					]
-				},
-				"description": "#### API endpoint to check the editability for an English name for the input national number .\n\n> A Successful API Request Will result in a **HTTP 200** status code .\n> \n> Request for non existing Applicant will return **HTTP 400** status code"
+				}
 			},
 			"response": []
 		}
