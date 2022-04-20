@@ -6,13 +6,13 @@
 	},
 	"item": [
 		{
-			"name": "applicant",
+			"name": "departments",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"NAT_NO\":\"1234\"}",
+					"raw": "{\r\n\"IsoCode\":\"001\",\r\n\"ServiceType\":\"Birth_Certificate\",\r\n\"DepartmentType\":\"02\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -20,7 +20,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8083/api/v2/test/applicantes",
+					"raw": "http://localhost:8083/api/v2/test/departments",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -30,7 +30,7 @@
 						"api",
 						"v2",
 						"test",
-						"applicantes"
+						"departments"
 					]
 				}
 			},
